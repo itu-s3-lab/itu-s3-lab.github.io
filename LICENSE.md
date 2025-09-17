@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
 Copyright (c) 2019 Peter Desmet
+
 Copyright (c) 2025 Luigi Capogrosso
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
