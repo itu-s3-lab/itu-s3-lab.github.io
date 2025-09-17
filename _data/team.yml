@@ -1,0 +1,35 @@
+# Project team members listed below will appear on the /team page.
+
+- name: Prof. Michele Magno
+  role: Principal Investigator
+  image: assets/bio/michele-magno.png
+  description: > # Can be Markdown.
+    Michele Magno (Senior Member, IEEE) received his M.Sc. and Ph.D. in Electronic Engineering from the University of Bologna, Italy, in 2004 and 2010, respectively.
+      {: .text-justify}
+
+    He is a Privatdozent at ETH Zurich, Switzerland, where he is the Head of the Project-Based Learning Center.
+    Furthermore, he is a Fellow Professor at the Interdisciplinary Transformation University of Austria (IT:U).
+    He has collaborated with several universities and research centers, such as Mid Sweden University, where he is a Guest Full Professor.
+      {: .text-justify}
+
+
+    He has published over 150 articles in international journals and conferences, for which he received multiple best papers and poster awards.
+      {: .text-justify}
+  web: https://it-u.at/en/research/professors/michele-magno/
+  orcid: 0000-0003-0368-8923
+  googlescholar: ytj7UUcAAAAJ
+  email: michele.magno@it-u.at
+
+- name: Luigi Capogrosso, Ph.D.
+  role: Postdoctoral Researcher
+  image: assets/bio/luigi-capogrosso.jpeg
+  description: > # Can be Markdown.
+    Luigi Capogrosso (Student Member, IEEE) received his Ph.D. in Artificial Intelligence (Cum Laude) at the Polytechnic of Turin in 2025.
+    He received his B.Sc. (2019) and M.Sc. (2021) at the University of Verona in Computer Science and Computer Engineering for Robotics and Smart Industry, respectively.
+      {: .text-justify}
+    His interests cover the broad area of learning, and the main topics he is currently working on can be grouped into the classes of efficient machine learning, learning-enabled cyber-physical systems, and representation learning.
+  orcid: 0000-0002-4941-2255
+  researchgate: Luigi-Capogrosso
+  googlescholar: sVTnbPYAAAAJ
+  github: luigicapogrosso
+  email: luigi.capogrosso@it-u.at

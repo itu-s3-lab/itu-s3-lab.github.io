@@ -1,0 +1,11 @@
+# Links listed below will be included in your site's navbar (navigation at the top).
+
+- text: Home # Note that users can also reach the homepage by clicking the site's title on the left in the navbar.
+  href: /
+- text: News
+  href: /news/
+- text: Team
+  href: /team/
+- text: GitHub
+  href: https://github.com/itu-s3-lab
+  new_window: true
