@@ -1,0 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'IT:U S³ Lab Official Website'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Luigi
+    family-names: Capogrosso
+    email: luigi.capogrosso@it-u.at
+    affiliation: >-
+      Interdisciplinary Transformation University of Austria
+      (IT:U)
+    orcid: 'https://orcid.org/0000-0002-4941-2255'
+repository-code: 'https://github.com/itu-s3-lab/itu-s3-lab.github.io'
+url: 'https://itu-s3-lab.github.io/'
+license: MIT
