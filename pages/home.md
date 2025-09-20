@@ -1,12 +1,12 @@
 ---
 layout: home
 title: IT:U S³ Lab
-description: Smart Space Sensing and Systems Lab (S³ Lab)
+description: Smart Sensing and Systems Lab (S³ Lab)
 background: /assets/theme/images/s3-bg.jpg
 permalink: /
 ---
 
-The S³ (Smart Space Sensing and Systems) Laboratory is a research group dedicated to advancing knowledge and technological innovation, with a strong commitment to teaching and cutting-edge research.
+The S³ (Smart Sensing and Systems) Laboratory is a research group dedicated to advancing knowledge and technological innovation, with a strong commitment to teaching and cutting-edge research.
 
 Our educational philosophy is founded on **Project-based Learning**, a methodological approach that immerses students in practical, hands-on experiences.
 This model enables the acquisition of advanced technical skills and problem-solving capabilities through the development of real-world projects, bridging the gap between academic theory and industrial application.
