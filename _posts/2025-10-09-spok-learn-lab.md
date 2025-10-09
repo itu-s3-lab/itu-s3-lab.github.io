@@ -8,12 +8,12 @@ background: /assets/theme/images/spok.jpg
 comments: false
 ---
 
-We’re excited to announce that the **SPOK Space Lab** now has its own official page on our website! ✨
+We are excited to announce that the **SPOK Learn Lab** now has its own official page on our website! ✨
 
-👉 [Visit the page here!](/spok-space-lab/) 🌐
+👉 [Visit the page here!](/spok-learn-lab/) 🌐
 
-This page comprehensively overviews the lab’s mission, research themes, and ongoing projects.
-It highlights how Spok Space Lab will serve as a central hub for teaching, research, collaborations, lab activities, and opportunities to get involved.
+This page overviews the lab’s mission, research themes, and ongoing projects.
+It highlights how SPOK will serve as a central hub for teaching, research, lab activities, and industry collaborations.
 
 We will continuously update it with news 📰, publications 📄, and highlights 🌟 from our team.
 
