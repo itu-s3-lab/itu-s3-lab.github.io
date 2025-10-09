@@ -13,10 +13,10 @@ This model enables the acquisition of advanced technical skills and problem-solv
 
 Our research activities focus on the intersection of intelligent systems and sustainable technologies, exploring innovative solutions for future challenges.
 Specifically, our areas of specialization include:
-*   **EdgeAI** and **Intelligent Systems and Sensors**: We develop artificial intelligence algorithms optimized for execution on low-power devices and design sensors capable of autonomously perceiving and interpreting the environment.
-*   **Wireless Sensor Networks (WSN)** and **Low-Power IoT**: We study efficient communication architectures and protocols to ensure the connectivity and sustainability of large-scale distributed systems.
-*   **Embedded Systems** and **Energy Harvesting**: Our research extends to foundational technologies, such as the design of embedded systems and the development of energy harvesting techniques to create fully self-powered smart devices.
-*   **Autonomous Robots**: We design and develop autonomous robots for complex scenarios and industrial applications.
+* 💡 **EdgeAI** and **Intelligent Systems and Sensors**: We develop artificial intelligence algorithms optimized for execution on low-power devices and design sensors capable of autonomously perceiving and interpreting the environment.
+* 🔋 **Wireless Sensor Networks (WSN)** and **Low-Power IoT**: We study efficient communication architectures and protocols to ensure the connectivity and sustainability of large-scale distributed systems.
+* ☀️ **Embedded Systems** and **Energy Harvesting**: Our research extends to foundational technologies, such as the design of embedded systems and the development of energy harvesting techniques to create fully self-powered smart devices.
+* 🤖 **Autonomous Robots**: We design and develop autonomous robots for complex scenarios and industrial applications.
 
 The S³ Lab is part of the [Interdisciplinary Transformation University of Austria (IT:U)](https://it-u.at/en/){:target="_blank"}, where creativity, engineering, and science come together to transform ideas into impactful real-world solutions.
 
