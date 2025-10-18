@@ -44,3 +44,5 @@ To facilitate our goals, SPOK will be equipped with state-of-the-art hardware an
 
 We are incredibly excited to embark on this journey and to build a new hub for space innovation here at IT:U.
 If you are a **student**, **researcher**, or **potential industry partner** passionate about space, AI, and hands-on engineering, we encourage you to **get in touch and join us on our mission** 👋
+
+### Latest News
