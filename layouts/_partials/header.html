@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <img src="{{ "images/logo.svg" | relURL }}" alt="S³ Lab" width="50" height="50">
+      <span class="brand-text">Smart Sensing and<br>Systems Lab · {{ site.Params.universityShort }}</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      {{- $current := . }}
+      {{- range site.Menus.main }}
+        {{- if eq .Identifier "github" }}
+          <a class="nav-link nav-icon" href="{{ .URL }}" aria-label="{{ .Name }}" rel="noopener">{{ partial "icon.html" (dict "name" "github" "size" 20) }}</a>
+        {{- else }}
+          {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+          {{- with .Page }}{{ if and (eq .Section "news") (eq $current.Section "news") }}{{ $active = true }}{{ end }}{{ end }}
+          <a class="nav-link{{ if $active }} is-active{{ end }}" href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{- end }}
+      {{- end }}
+    </nav>
+  </div>
+</header>

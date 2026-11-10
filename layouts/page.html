@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+{{ with .Params.banner }}
+<div class="container">
+  <img class="banner" src="{{ . | relURL }}" alt="">
+</div>
+{{ end }}
+<div class="container section-tight">
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

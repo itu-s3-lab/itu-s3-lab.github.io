@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="container section-tight">
+  <div class="research-list">
+    {{- range $i, $a := hugo.Data.research }}
+    <section class="research-item">
+      <div class="card-icon">{{ partial "icon.html" (dict "name" $a.icon) }}</div>
+      <div>
+        <p class="label">{{ printf "%02d" (add $i 1) }}</p>
+        <h2>{{ $a.title }}</h2>
+        <p>{{ $a.text }}</p>
+      </div>
+    </section>
+    {{- end }}
+  </div>
+
+  <aside class="feature-card">
+    <div class="card-icon card-icon-dark">{{ partial "icon.html" (dict "name" "satellite") }}</div>
+    <div>
+      <p class="label label-dark">Flagship initiative</p>
+      <h2>SPOK: building IT:U's first CubeSat</h2>
+      <p>Our space lab brings edge AI, smart sensors and low-power embedded systems to orbit, with students designing, integrating and launching a real satellite.</p>
+      <a class="recap-link" href="{{ "spok-learn-lab/" | relURL }}">Discover SPOK {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+    </div>
+  </aside>
+
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+</div>
+{{ end }}

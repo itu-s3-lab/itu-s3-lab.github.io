@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="container section-tight">
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  <div class="news-list">
+    {{ range .Pages }}{{ partial "news-row.html" . }}{{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,5 @@
+<article class="news-row">
+  <p class="date mono">{{ .Date.Format "02 Jan 2006" | upper }}{{ if .Params.recap }} · <span class="tag">Monthly recap</span>{{ end }}</p>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  {{ with .Summary }}<p>{{ . | plainify }}</p>{{ end }}
+</article>

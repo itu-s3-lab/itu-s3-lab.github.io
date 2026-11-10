@@ -1,0 +1,29 @@
+# Research areas. Shown as cards on the home page and in full on /research/.
+# icon: one of chip, wifi, bolt, robot, satellite (see layouts/_partials/icon.html)
+
+- title: "Edge AI & Intelligent Sensors"
+  icon: chip
+  summary: "AI models optimized for low-power devices, and sensors that perceive and interpret their environment autonomously."
+  text: >
+    We develop artificial intelligence algorithms optimized for execution on low-power devices,
+    and design sensors capable of autonomously perceiving and interpreting the environment.
+
+- title: "Wireless Sensor Networks & Low-Power IoT"
+  icon: wifi
+  summary: "Efficient architectures and protocols that keep large distributed systems connected and sustainable."
+  text: >
+    We study efficient communication architectures and protocols to ensure the connectivity
+    and sustainability of large-scale distributed systems.
+
+- title: "Embedded Systems & Energy Harvesting"
+  icon: bolt
+  summary: "Embedded hardware and harvesting techniques for smart devices that power themselves."
+  text: >
+    Our research extends to foundational technologies, such as the design of embedded systems
+    and the development of energy harvesting techniques to create fully self-powered smart devices.
+
+- title: "Autonomous Robots"
+  icon: robot
+  summary: "Robots designed for complex scenarios and real industrial applications."
+  text: >
+    We design and develop autonomous robots for complex scenarios and industrial applications.

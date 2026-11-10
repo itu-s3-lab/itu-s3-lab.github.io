@@ -1,8 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2019 Peter Desmet
-
-Copyright (c) 2025 Luigi Capogrosso
+Copyright (c) 2025-2026 Luigi Capogrosso, IT:U S³ Lab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -21,3 +19,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+---
+
+Content (texts, images, logo) is licensed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+Fonts in static/fonts/ are licensed under the SIL Open Font License 1.1
+(see the OFL-*.txt files in that folder).

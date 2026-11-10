@@ -1,0 +1,7 @@
+<section class="page-header">
+  <div class="container">
+    {{ with .Params.eyebrow }}<p class="label">{{ . }}</p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  </div>
+</section>

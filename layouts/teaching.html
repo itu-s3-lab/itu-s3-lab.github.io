@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="container section-tight">
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+  <div class="teach-grid">
+    <a class="feature-card feature-link" href="{{ "spok-learn-lab/" | relURL }}">
+      <div class="card-icon card-icon-dark">{{ partial "icon.html" (dict "name" "satellite") }}</div>
+      <div>
+        <p class="label label-dark">IT:U Space Lab</p>
+        <h2>SPOK Learn Lab</h2>
+        <p>A hands-on engineering hub where students design, integrate and launch IT:U's first CubeSat, starting from educational satellite kits.</p>
+        <span class="recap-link">Discover SPOK {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</span>
+      </div>
+    </a>
+
+    <section class="side-card" id="theses">
+      <p class="label">Students</p>
+      <h2>Thesis projects</h2>
+      <p>We offer bachelor's and master's thesis projects in edge AI, smart sensors, low-power IoT, embedded systems and robotics.</p>
+      <p>To discuss open topics, write to:</p>
+      <ul class="plain-list">
+        {{- range site.Params.contacts }}<li class="mono">{{ . }}</li>{{ end }}
+      </ul>
+    </section>
+  </div>
+</div>
+{{ end }}

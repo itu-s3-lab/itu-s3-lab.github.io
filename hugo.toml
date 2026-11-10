@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────────────────────
+#  S³ Lab website — main configuration
+#  Most day-to-day edits happen in content/ and data/, not here.
+# ─────────────────────────────────────────────────────────────
+
+baseURL = "https://itu-s3-lab.github.io/"
+locale = "en-us"
+title = "S³ Lab"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  # Short description used by search engines and link previews.
+  description = "The Smart Sensing and Systems Lab (S³ Lab) at IT:U designs low-power sensors, embedded systems and edge AI."
+  # Website version, shown in the footer. Bump it when you publish a new release on GitHub.
+  version = "1.0"
+  github = "https://github.com/itu-s3-lab"
+  university = "Interdisciplinary Transformation University Austria (IT:U)"
+  universityShort = "IT:U"
+  universityURL = "https://it-u.at/en/"
+  city = "Linz, Austria"
+  # Written this way on purpose, to keep spam bots away.
+  contacts = [
+    "michele [dot] magno [at] it-u [dot] at",
+    "luigi [dot] capogrosso [at] it-u [dot] at",
+  ]
+
+# Top navigation. "weight" decides the order.
+[menus]
+  [[menus.main]]
+    name = "Research"
+    pageRef = "/research"
+    weight = 10
+  [[menus.main]]
+    name = "Publications"
+    pageRef = "/publications"
+    weight = 20
+  [[menus.main]]
+    name = "Team"
+    pageRef = "/team"
+    weight = 30
+  [[menus.main]]
+    name = "News"
+    pageRef = "/news"
+    weight = 40
+  [[menus.main]]
+    name = "Teaching"
+    pageRef = "/teaching"
+    weight = 50
+  [[menus.main]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/itu-s3-lab"
+    weight = 60
+
+# News URLs look like /news/2026/new-website/
+[permalinks]
+  [permalinks.page]
+    news = "/news/:year/:slug/"
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["html", "rss"]
+  section = ["html", "rss"]
+
+[markup.goldmark.renderer]
+  # Allows plain HTML inside Markdown files (e.g. an embedded video).
+  unsafe = true
+
+[caches.images]
+  dir = ":cacheDir/images"

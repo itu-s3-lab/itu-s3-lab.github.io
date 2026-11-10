@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article>
+  <header class="page-header">
+    <div class="container narrow">
+      <p class="label"><a href="{{ "news/" | relURL }}">News</a> · {{ .Date.Format "02 January 2006" }}{{ if .Params.recap }} · Monthly recap{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+  <div class="container narrow section-tight">
+    {{ with .Params.image }}<img class="post-image" src="{{ . | relURL }}" alt="">{{ end }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+    <nav class="post-nav" aria-label="More news">
+      {{ with .NextInSection }}<a href="{{ .RelPermalink }}"><small>Newer</small>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+      {{ with .PrevInSection }}<a class="post-nav-next" href="{{ .RelPermalink }}"><small>Older</small>{{ .Title }}</a>{{ end }}
+    </nav>
+  </div>
+</article>
+{{ end }}

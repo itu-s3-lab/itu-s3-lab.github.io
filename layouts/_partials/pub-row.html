@@ -1,0 +1,14 @@
+<div class="pub-row">
+  <div class="pub-year mono">{{ .year }}</div>
+  <div class="pub-body">
+    <p class="pub-title">{{ .title }}</p>
+    <p class="pub-meta">{{ .authors }}{{ with .venue }} · <em>{{ . }}</em>{{ end }}</p>
+  </div>
+  {{- with .links }}
+  <div class="pub-links">
+    {{- with .pdf }}<a href="{{ . }}" rel="noopener">PDF</a>{{ end }}
+    {{- with .doi }}<a href="{{ . }}" rel="noopener">DOI</a>{{ end }}
+    {{- with .code }}<a href="{{ . }}" rel="noopener">Code</a>{{ end }}
+  </div>
+  {{- end }}
+</div>

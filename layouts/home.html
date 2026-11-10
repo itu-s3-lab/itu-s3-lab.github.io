@@ -1,0 +1,143 @@
+{{ define "main" }}
+{{- $n := 0 }}
+
+<section class="hero container">
+  <div class="hero-text">
+    {{ with .Params.eyebrow }}<p class="label label-accent">{{ . }}</p>{{ end }}
+    <h1>{{ .Params.headline }}</h1>
+    <p class="lead">{{ .Params.intro }}</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="{{ "research/" | relURL }}">Explore our research</a>
+      <a class="btn btn-secondary" href="{{ "news/" | relURL }}">Read the latest news</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">{{ partial "hero-art.html" . }}</div>
+</section>
+
+{{/* ── Research ─────────────────────────────── */}}
+{{- $n = add $n 1 }}
+<section class="band" id="research">
+  <div class="container section">
+    <div class="section-head">
+      <div>
+        <p class="label">{{ printf "%02d" $n }} — Research</p>
+        <h2>What we work on</h2>
+        <p class="section-intro">Our research sits where intelligent systems meet sustainable technology: from the algorithm down to the sensor and the energy that powers it.</p>
+      </div>
+      <a class="more" href="{{ "research/" | relURL }}">More about our research {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+    </div>
+    <div class="card-grid">
+      {{- range hugo.Data.research }}
+      <div class="card">
+        <div class="card-icon">{{ partial "icon.html" (dict "name" .icon) }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .summary }}</p>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{/* ── News ─────────────────────────────────── */}}
+{{- $news := where site.RegularPages "Section" "news" }}
+{{- with $news }}
+{{- $n = add $n 1 }}
+{{- $recaps := where $news "Params.recap" true }}
+{{- $posts := where $news "Params.recap" "!=" true }}
+<section class="container section" id="news">
+  <div class="section-head">
+    <div>
+      <p class="label">{{ printf "%02d" $n }} — News</p>
+      <h2>What's happening in the lab</h2>
+    </div>
+    <a class="more" href="{{ "news/" | relURL }}">All news {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+  </div>
+  <div class="news-layout{{ if not $recaps }} news-layout-single{{ end }}">
+    {{- with index $recaps 0 }}
+    <article class="recap-card">
+      <p class="label label-dark"><span class="dot" aria-hidden="true"></span>Monthly recap</p>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ with .Summary }}<p class="recap-summary">{{ . | plainify }}</p>{{ end }}
+      {{- with .Params.highlights }}
+      <dl class="recap-list">
+        {{ with .papers }}<div><dt>Papers</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .people }}<div><dt>People</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .events }}<div><dt>Events</dt><dd>{{ . }}</dd></div>{{ end }}
+      </dl>
+      {{- end }}
+      <a class="recap-link" href="{{ .RelPermalink }}">Read the full recap {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+    </article>
+    {{- end }}
+    <div class="news-list">
+      {{- range first 3 $posts }}
+        {{ partial "news-row.html" . }}
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{/* ── Teaching ─────────────────────────────── */}}
+{{- $n = add $n 1 }}
+<section class="band" id="teaching">
+  <div class="container section split">
+    <div class="split-main">
+      <p class="label">{{ printf "%02d" $n }} — Teaching</p>
+      <h2>{{ .Params.teaching_title }}</h2>
+      <p class="section-intro">{{ .Params.teaching_text }}</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{ "spok-learn-lab/" | relURL }}">Visit the SPOK Learn Lab {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+      </div>
+    </div>
+    <div class="side-card">
+      <p class="label">Students</p>
+      <h3>Looking for a thesis?</h3>
+      <p>We offer bachelor's and master's thesis projects across all our research areas. Get in touch to discuss open topics.</p>
+      <a class="more" href="{{ "teaching/" | relURL }}#theses">How to apply {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+    </div>
+  </div>
+</section>
+
+{{/* ── Team ─────────────────────────────────── */}}
+{{- with hugo.Data.team }}
+{{- $n = add $n 1 }}
+<section class="container section" id="team">
+  <div class="section-head">
+    <div>
+      <p class="label">{{ printf "%02d" $n }} — Team</p>
+      <h2>The people behind the lab</h2>
+    </div>
+    <a class="more" href="{{ "team/" | relURL }}">Meet the team {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+  </div>
+  <div class="people-strip">
+    {{- range . }}
+    <a class="person-chip" href="{{ "team/" | relURL }}#{{ .name | anchorize }}">
+      <img src="{{ .image | relURL }}" alt="" width="64" height="64" loading="lazy">
+      <span><strong>{{ .name }}</strong><small>{{ .role }}</small></span>
+    </a>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{/* ── Selected publications (hidden while the list is empty) ── */}}
+{{- $selected := where (hugo.Data.publications | default slice) "selected" true }}
+{{- with $selected }}
+{{- $n = add $n 1 }}
+<section class="band" id="publications">
+  <div class="container section">
+    <div class="section-head">
+      <div>
+        <p class="label">{{ printf "%02d" $n }} — Publications</p>
+        <h2>Selected publications</h2>
+      </div>
+      <a class="more" href="{{ "publications/" | relURL }}">All publications {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+    </div>
+    <div class="pub-list">
+      {{- range first 3 (sort . "year" "desc") }}{{ partial "pub-row.html" . }}{{ end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{ end }}

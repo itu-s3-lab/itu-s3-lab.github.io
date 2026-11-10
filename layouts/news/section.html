@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="container section-tight">
+  {{- $pager := .Paginate .Pages }}
+  <div class="news-list news-list-page">
+    {{- range $pager.Pages }}{{ partial "news-row.html" . }}{{ end }}
+  </div>
+  {{- if gt $pager.TotalPages 1 }}
+  <nav class="pager" aria-label="Pagination">
+    {{ with $pager.Prev }}<a class="btn btn-secondary" href="{{ .URL }}">← Newer</a>{{ end }}
+    <span class="mono">Page {{ $pager.PageNumber }} of {{ $pager.TotalPages }}</span>
+    {{ with $pager.Next }}<a class="btn btn-secondary" href="{{ .URL }}">Older →</a>{{ end }}
+  </nav>
+  {{- end }}
+  {{ with .OutputFormats.Get "rss" }}
+  <p class="rss-note"><a href="{{ .RelPermalink }}">{{ partial "icon.html" (dict "name" "rss" "size" 16) }} Subscribe via RSS</a></p>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="container section-tight">
+  {{- $team := hugo.Data.team | default slice }}
+  {{- range hugo.Data.team_groups }}
+    {{- $group := . }}
+    {{- $members := where $team "group" $group }}
+    {{- with $members }}
+    <section class="team-group">
+      <h2 class="label">{{ $group }}</h2>
+      <div class="team-list">
+        {{- range . }}
+        <article class="member" id="{{ .name | anchorize }}">
+          <img src="{{ .image | relURL }}" alt="Portrait of {{ .name }}" width="160" height="160" loading="lazy">
+          <div class="member-body">
+            <h3>{{ .name }}</h3>
+            <p class="member-role">{{ .role }}</p>
+            {{ with .bio }}<div class="member-bio">{{ . | markdownify }}</div>{{ end }}
+            {{- with .links }}
+            <div class="member-links">
+              {{- with .web }}<a href="{{ . }}" aria-label="Website" title="Website" rel="noopener">{{ partial "icon.html" (dict "name" "globe" "size" 20) }}</a>{{ end }}
+              {{- with .email }}<a href="mailto:{{ . }}" aria-label="E-mail" title="E-mail">{{ partial "icon.html" (dict "name" "mail" "size" 20) }}</a>{{ end }}
+              {{- with .scholar }}<a href="https://scholar.google.com/citations?user={{ . }}" aria-label="Google Scholar" title="Google Scholar" rel="noopener">{{ partial "icon.html" (dict "name" "scholar" "size" 20) }}</a>{{ end }}
+              {{- with .orcid }}<a href="https://orcid.org/{{ . }}" aria-label="ORCID" title="ORCID" rel="noopener">{{ partial "icon.html" (dict "name" "orcid" "size" 20) }}</a>{{ end }}
+              {{- with .github }}<a href="https://github.com/{{ . }}" aria-label="GitHub" title="GitHub" rel="noopener">{{ partial "icon.html" (dict "name" "github" "size" 20) }}</a>{{ end }}
+              {{- with .researchgate }}<a href="https://www.researchgate.net/profile/{{ . }}" aria-label="ResearchGate" title="ResearchGate" rel="noopener">{{ partial "icon.html" (dict "name" "researchgate" "size" 20) }}</a>{{ end }}
+              {{- with .linkedin }}<a href="{{ . }}" aria-label="LinkedIn" title="LinkedIn" rel="noopener">{{ partial "icon.html" (dict "name" "linkedin" "size" 20) }}</a>{{ end }}
+            </div>
+            {{- end }}
+          </div>
+        </article>
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
+  {{- end }}
+
+  <aside class="side-card join-card">
+    <p class="label">Join us</p>
+    <h3>Interested in working with us?</h3>
+    <p>We are always happy to hear from motivated students and researchers. Write to {{ index site.Params.contacts 0 }}.</p>
+  </aside>
+</div>
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="page-header">
+  <div class="container">
+    <p class="label">Error 404</p>
+    <h1>Page not found</h1>
+    <p class="lead">The page you are looking for does not exist, or it was part of the previous version of the website.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="{{ "/" | relURL }}">Back to the home page</a>
+      <a class="btn btn-secondary" href="{{ "news/" | relURL }}">Latest news</a>
+    </div>
+  </div>
+</section>
+{{ end }}

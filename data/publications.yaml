@@ -1,0 +1,16 @@
+# Publications, shown on /publications/ grouped by year (newest first).
+# Entries with  selected: true  also appear on the home page (max 3).
+# Remove the "[]" below and add entries like the example.
+#
+# - title: "Paper title"
+#   authors: "A. Author, B. Author, M. Magno"
+#   venue: "IEEE Sensors Conference"
+#   year: 2026
+#   type: conference        # conference | journal | workshop | preprint | book-chapter
+#   selected: true
+#   links:                  # all optional
+#     pdf: "https://arxiv.org/abs/..."
+#     doi: "https://doi.org/..."
+#     code: "https://github.com/itu-s3-lab/..."
+
+[]

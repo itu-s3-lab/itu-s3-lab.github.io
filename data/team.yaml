@@ -1,0 +1,37 @@
+# Team members, shown on /team/ (and as avatars on the home page).
+#
+# group: must match one of the names in data/team_groups.yaml
+# image: put the photo in static/images/team/ (square, about 480x480 px)
+# bio:   can be Markdown
+# links: all optional — web, email, scholar (Google Scholar ID), orcid, github, researchgate, linkedin
+
+- name: "Prof. Michele Magno"
+  role: "Principal Investigator"
+  group: "Principal Investigator"
+  image: "images/team/michele-magno.jpg"
+  bio: |
+    Michele Magno (Senior Member, IEEE) received his M.Sc. and Ph.D. in Electronic Engineering from the University of Bologna, Italy, in 2004 and 2010, respectively.
+    He is a Privatdozent at ETH Zurich, Switzerland, where he is the Head of the Project-Based Learning Center.
+    Furthermore, he is a Fellow Professor at the Interdisciplinary Transformation University of Austria (IT:U).
+    He has collaborated with several universities and research centers, such as Mid Sweden University, where he is a Guest Full Professor.
+    He has published over 350 articles in international journals and conferences, for which he received multiple best papers and poster awards.
+  links:
+    web: "https://it-u.at/en/research/professors/michele-magno/"
+    email: "michele.magno@it-u.at"
+    scholar: "ytj7UUcAAAAJ"
+    orcid: "0000-0003-0368-8923"
+
+- name: "Luigi Capogrosso, Ph.D."
+  role: "Postdoctoral Researcher"
+  group: "Postdoctoral Researchers"
+  image: "images/team/luigi-capogrosso.jpg"
+  bio: |
+    Luigi Capogrosso (Student Member, IEEE) received his Ph.D. in Artificial Intelligence (Cum Laude) at the Polytechnic of Turin in 2025.
+    He received his B.Sc. (2019) and M.Sc. (2021) at the University of Verona in Computer Science and Computer Engineering for Robotics and Smart Industry, respectively.
+    His interests cover the broad area of learning, and the main topics he is currently working on can be grouped into the classes of efficient machine learning, learning-enabled cyber-physical systems, and representation learning.
+  links:
+    email: "luigi.capogrosso@it-u.at"
+    scholar: "sVTnbPYAAAAJ"
+    orcid: "0000-0002-4941-2255"
+    github: "luigicapogrosso"
+    researchgate: "Luigi-Capogrosso"

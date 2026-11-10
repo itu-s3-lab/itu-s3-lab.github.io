@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <img src="{{ "images/logo-white.svg" | relURL }}" alt="S³ Lab" width="72" height="72">
+        <p>Smart Sensing and Systems Lab at the <a href="{{ site.Params.universityURL }}" rel="noopener">{{ site.Params.university }}</a>, {{ site.Params.city }}.</p>
+      </div>
+      <div class="footer-col">
+        <h2 class="label">Contact</h2>
+        {{- range site.Params.contacts }}
+        <span>{{ . }}</span>
+        {{- end }}
+      </div>
+      <div class="footer-col">
+        <h2 class="label">Links</h2>
+        <a href="{{ site.Params.github }}" rel="noopener">GitHub</a>
+        <a href="{{ site.Params.universityURL }}" rel="noopener">{{ site.Params.universityShort }}</a>
+        {{- with site.GetPage "/news" }}{{ with .OutputFormats.Get "rss" }}
+        <a href="{{ .RelPermalink }}">RSS feed</a>
+        {{- end }}{{ end }}
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {{ now.Year }} S³ Lab, {{ site.Params.universityShort }}. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>.</span>
+      <span class="mono">Website v{{ site.Params.version }}</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="container section-tight">
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  {{- $pubs := hugo.Data.publications | default slice }}
+  {{- with $pubs }}
+    {{- $years := slice }}
+    {{- range . }}{{ $years = $years | append .year }}{{ end }}
+    {{- range ($years | uniq | sort | collections.Reverse) }}
+    {{- $year := . }}
+    <section class="pub-group">
+      <h2 class="pub-group-year">{{ $year }}</h2>
+      <div class="pub-list">
+        {{- range where $pubs "year" $year }}{{ partial "pub-row.html" . }}{{ end }}
+      </div>
+    </section>
+    {{- end }}
+  {{- else }}
+    <div class="side-card">
+      <p class="label">Coming soon</p>
+      <h3>Our publication list is being updated</h3>
+      <p>In the meantime, you can find our papers on Google Scholar.</p>
+      <div class="actions">
+        {{- range $m := hugo.Data.team }}{{ with $m.links }}{{ with .scholar }}
+        <a class="btn btn-secondary" href="https://scholar.google.com/citations?user={{ . }}" rel="noopener">{{ partial "icon.html" (dict "name" "scholar" "size" 18) }} {{ $m.name }}</a>
+        {{- end }}{{ end }}{{ end }}
+      </div>
+    </div>
+  {{- end }}
+</div>
+{{ end }}
