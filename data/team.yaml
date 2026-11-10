@@ -10,23 +10,23 @@
   group: "Principal Investigator"
   image: "images/team/michele-magno.jpg"
   bio: |
-    Michele Magno (Senior Member, IEEE) received his M.Sc. and Ph.D. in Electronic Engineering from the University of Bologna, Italy, in 2004 and 2010, respectively.
-    He is a Privatdozent at ETH Zurich, Switzerland, where he is the Head of the Project-Based Learning Center.
+    Michele Magno (Fellow, IEEE) received his M.Sc. and Ph.D. in Electronic Engineering from the University of Bologna, Italy, in 2004 and 2010, respectively.
+    He is a Professor at ETH Zurich, Switzerland, where he is the Head of the Project-Based Learning Center.
     Furthermore, he is a Fellow Professor at the Interdisciplinary Transformation University of Austria (IT:U).
     He has collaborated with several universities and research centers, such as Mid Sweden University, where he is a Guest Full Professor.
-    He has published over 350 articles in international journals and conferences, for which he received multiple best papers and poster awards.
+    He has published over 400 articles in international journals and conferences, for which he received multiple best papers and poster awards.
   links:
     web: "https://it-u.at/en/research/professors/michele-magno/"
     email: "michele.magno@it-u.at"
     scholar: "ytj7UUcAAAAJ"
     orcid: "0000-0003-0368-8923"
 
-- name: "Luigi Capogrosso, Ph.D."
+- name: "Dr. Luigi Capogrosso"
   role: "Postdoctoral Researcher"
   group: "Postdoctoral Researchers"
   image: "images/team/luigi-capogrosso.jpg"
   bio: |
-    Luigi Capogrosso (Student Member, IEEE) received his Ph.D. in Artificial Intelligence (Cum Laude) at the Polytechnic of Turin in 2025.
+    Luigi Capogrosso (Member, IEEE) received his Ph.D. in Artificial Intelligence (Cum Laude) at the Polytechnic of Turin in 2025.
     He received his B.Sc. (2019) and M.Sc. (2021) at the University of Verona in Computer Science and Computer Engineering for Robotics and Smart Industry, respectively.
     His interests cover the broad area of learning, and the main topics he is currently working on can be grouped into the classes of efficient machine learning, learning-enabled cyber-physical systems, and representation learning.
   links:
@@ -35,3 +35,28 @@
     orcid: "0000-0002-4941-2255"
     github: "luigicapogrosso"
     researchgate: "Luigi-Capogrosso"
+
+- name: "Anna-Lena Hager"
+  role: "Ph.D. Student"
+  group: "Ph.D. Students"
+  image: "images/team/anna-lena-hager.jpg"
+  bio: |
+    Anna-Lena Hager's research focuses on developing efficient AI solutions for resource-constrained systems, with broader interests spanning machine learning optimization and cyber-physical systems.
+    Previously, she worked as a Research Assistant at Johannes Kepler University (JKU) Linz on autonomous systems and cyber-physical production systems.
+    She holds an M.Sc. in Artificial Intelligence from JKU and a B.Sc. in Industrial Engineering, with a focus on Mechanical Engineering, from the Management Center Innsbruck.
+  links:
+    email: "anna-lena.hager@it-u.at"
+
+- name: "Shiyi Wang"
+  role: "Ph.D. Student"
+  group: "Ph.D. Students"
+  image: "images/team/shiyi-wang.jpg"
+  bio: |
+    Shiyi Wang received his M.Eng. in Cyberspace Security from Southeast University in 2025 and two B.Eng. degrees in Communication Engineering and Information Security from Nanjing University of Posts and Telecommunications in 2022.
+    His master's research focused on radio frequency fingerprint identification for LTE-V2X direct communication.
+    His undergraduate research in Communication Engineering examined electromagnetic scattering using characteristic mode theory, while his research for the second degree in Information Security focused on the implementation of cryptographic authentication based on the Learning Parity with Noise problem.
+    His research interests include wireless communications, efficient satellite telecommunications systems, embedded AI, and physical-layer security.
+    Beyond research, he served as president of his university choir and played in the second violin of the university symphony orchestra.
+    He enjoys classical music, photography, powerlifting, and Formula 1.
+  links:
+    email: "shiyi.wang@it-u.at"
