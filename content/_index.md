@@ -9,5 +9,5 @@ intro: "We design low-power sensors, embedded systems and edge AI that run where
 
 # Teaching band
 teaching_title: "Learning by building"
-teaching_text: "Our teaching follows project-based learning: students gain advanced technical and problem-solving skills by developing real-world projects, bridging academic theory and industrial practice."
+teaching_text: "In our 10 ECTS master's course Physical AI in the Space Domain, small teams build a working CubeSat prototype in SPOK, our LearnLab at Infineon in Linz."
 ---

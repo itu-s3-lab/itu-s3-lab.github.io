@@ -1,9 +1,83 @@
 ---
 title: "Teaching"
 eyebrow: "Teaching"
-description: "Learning by building: project-based education in smart sensing, embedded systems and edge AI."
+description: "We teach Physical AI in the Space Domain, a 10 ECTS master's course where students build a working CubeSat prototype in SPOK, our LearnLab at IT:U."
 layout: teaching
+banner: "images/spok-banner.jpg"
+# The old SPOK page now redirects here.
+aliases: ["/spok-learn-lab/"]
+
+# ── The course ───────────────────────────────────────────────
+course:
+  title: "Physical AI in the Space Domain"
+  level: "Master's course"
+  ects: "10 ECTS"
+  split: "4 theory · 6 practical"
+  text: >
+    How do you sense the world from orbit, make sense of the data on board, and send the result back to Earth?
+    In this course, students follow the full chain of a space system, from sensing to computation to transmission,
+    and apply it to a real mission: designing and building a CubeSat prototype for Earth observation.
+  # Optional: link to public course material (leave empty to hide the button)
+  materials: ""
+
+modules:
+  - title: "Smart Sensing"
+    icon: chip
+    text: "From electronics basics to real sensors in space."
+    topics:
+      - "Arduino: getting started, electricity basics, Ohm's law, series and parallel circuits"
+      - "Raspberry Pi and the Sense HAT: environmental sensing and data logging"
+      - "The Raspberry Pi AI Camera and computer vision"
+      - "Analysis of real time-series and image data collected on the ISS"
+  - title: "Edge AI Computing"
+    icon: bolt
+    text: "Turning raw data into decisions, directly on the device."
+    topics:
+      - "Exploratory data analysis: cleaning, missing values, visualization"
+      - "Introduction to deep learning"
+      - "Training deep neural networks with PyTorch"
+  - title: "Communication & Telemetry"
+    icon: wifi
+    text: "Getting data off the satellite and down to the ground."
+    topics:
+      - "Serial communication with UART"
+      - "Telemetry and data links between the satellite and a ground station"
+
+project:
+  title: "The LearnLab project: a CubeSat for Earth observation"
+  text: >
+    In the practical part, small interdisciplinary teams design and build their own CubeSat prototype:
+    a 3D-printed frame around a Raspberry Pi 5, with the Sense HAT and the AI Camera acquiring top-view images
+    and sensor data, streamed live to a ground-station dashboard. Teams work through a Design Thinking process.
+  phases:
+    - name: "Empathize"
+      text: "Understand users, their needs and the mission context."
+    - name: "Define"
+      text: "Turn insights into a clear problem statement."
+    - name: "Ideate"
+      text: "Generate and select solution ideas."
+    - name: "Prototype"
+      text: "Build a working CubeSat prototype."
+    - name: "Test"
+      text: "Evaluate the prototype and refine the solution."
+
+# ── Where we teach ───────────────────────────────────────────
+learnlab:
+  name: "SPOK"
+  subtitle: "IT:U Space LearnLab"
+  quote: >
+    Tired of big lecture halls, endless theory, and waiting until the final semester to actually build something with technology?
+    At IT:U, learning works differently. Your future classrooms are cutting-edge LearnLabs, where from day one,
+    you work in small, interdisciplinary teams on real projects, guided by experts. This is where ideas turn into prototypes,
+    and theory becomes something you can see, test, and experience.
+  quote_source: "IT:U on its LearnLabs"
+  location_title: "At Infineon in Linz"
+  location_text: >
+    SPOK is located inside Infineon's site in Linz, as part of the new cluster that IT:U has opened there.
+    Students learn and build right next to a world leader in semiconductors and power systems.
+  partner_logo: "images/partners/infineon-logo.svg"
+  partner_name: "Infineon Technologies"
 ---
 
-Our educational philosophy is founded on **Project-based Learning**, a methodological approach that immerses students in practical, hands-on experiences.
-This model enables the acquisition of advanced technical skills and problem-solving capabilities through the development of real-world projects, bridging the gap between academic theory and industrial application.
+Our educational philosophy is founded on **project-based learning**: students acquire advanced technical skills and problem-solving capabilities by developing real-world projects, bridging the gap between academic theory and industrial application.
+Students who want to go further can continue with a thesis or an internship in our lab.

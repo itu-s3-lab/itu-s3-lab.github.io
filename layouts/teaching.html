@@ -1,28 +1,101 @@
 {{ define "main" }}
 {{ partial "page-header.html" . }}
+
 <div class="container section-tight">
   {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
-  <div class="teach-grid">
-    <a class="feature-card feature-link" href="{{ "spok-learn-lab/" | relURL }}">
-      <div class="card-icon card-icon-dark">{{ partial "icon.html" (dict "name" "satellite") }}</div>
-      <div>
-        <p class="label label-dark">IT:U Space Lab</p>
-        <h2>SPOK Learn Lab</h2>
-        <p>A hands-on engineering hub where students design, integrate and launch IT:U's first CubeSat, starting from educational satellite kits.</p>
-        <span class="recap-link">Discover SPOK {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</span>
-      </div>
-    </a>
+  {{/* ── The course ─────────────────────────── */}}
+  {{- with .Params.course }}
+  <section class="course-card" aria-labelledby="course-title">
+    <div class="course-main">
+      <p class="label label-dark"><span class="dot" aria-hidden="true"></span>{{ .level }}</p>
+      <h2 id="course-title">{{ .title }}</h2>
+      <p>{{ .text }}</p>
+      {{ with .materials }}<a class="recap-link" href="{{ . }}" rel="noopener">Course material {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>{{ end }}
+    </div>
+    <dl class="course-facts">
+      <div><dt>Credits</dt><dd>{{ .ects }}</dd></div>
+      <div><dt>Split</dt><dd>{{ .split }}</dd></div>
+      <div><dt>Where</dt><dd>SPOK LearnLab, Linz</dd></div>
+    </dl>
+  </section>
+  {{- end }}
 
-    <section class="side-card" id="theses">
-      <p class="label">Students</p>
-      <h2>Thesis projects</h2>
-      <p>We offer bachelor's and master's thesis projects in edge AI, smart sensors, low-power IoT, embedded systems and robotics.</p>
-      <p>To discuss open topics, write to:</p>
-      <ul class="plain-list">
-        {{- range site.Params.contacts }}<li class="mono">{{ . }}</li>{{ end }}
-      </ul>
-    </section>
+  {{/* ── Modules ────────────────────────────── */}}
+  {{- with .Params.modules }}
+  <section class="teach-block">
+    <p class="label">Theory</p>
+    <h2>Sensing, computation, transmission</h2>
+    <div class="card-grid module-grid">
+      {{- range $i, $m := . }}
+      <div class="card">
+        <div class="card-icon">{{ partial "icon.html" (dict "name" $m.icon) }}</div>
+        <p class="label module-num">Module {{ add $i 1 }}</p>
+        <h3>{{ $m.title }}</h3>
+        <p>{{ $m.text }}</p>
+        <ul class="topic-list">
+          {{- range $m.topics }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{/* ── Project ────────────────────────────── */}}
+  {{- with .Params.project }}
+  <section class="teach-block">
+    <p class="label">Practice</p>
+    <h2>{{ .title }}</h2>
+    <p class="section-intro">{{ .text }}</p>
+    <ol class="phases">
+      {{- range $i, $p := .phases }}
+      <li>
+        <span class="phase-num mono">{{ printf "%02d" (add $i 1) }}</span>
+        <strong>{{ $p.name }}</strong>
+        <span>{{ $p.text }}</span>
+      </li>
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
+</div>
+
+{{/* ── Where we teach: SPOK ─────────────────── */}}
+{{- with .Params.learnlab }}
+<section class="band" id="spok">
+  <div class="container section">
+    <p class="label">Where we teach</p>
+    <h2>{{ .name }} <span class="h-sub">· {{ .subtitle }}</span></h2>
+    {{ with $.Params.banner }}<img class="banner" src="{{ . | relURL }}" alt="">{{ end }}
+    <div class="learnlab-grid">
+      <figure class="quote">
+        <blockquote>{{ .quote }}</blockquote>
+        <figcaption class="mono">— {{ .quote_source }}</figcaption>
+      </figure>
+      <div class="side-card location-card">
+        <p class="label">Location</p>
+        {{- $logo := .partner_logo }}
+        {{- if and $logo (os.FileExists (path.Join "static" $logo)) }}
+        <img class="partner-logo" src="{{ $logo | relURL }}" alt="{{ .partner_name }}">
+        {{- end }}
+        <h3>{{ .location_title }}</h3>
+        <p>{{ .location_text }}</p>
+      </div>
+    </div>
   </div>
+</section>
+{{- end }}
+
+{{/* ── Theses ───────────────────────────────── */}}
+<div class="container section">
+  <section class="side-card theses-card" id="theses">
+    <p class="label">Students</p>
+    <h2>Thesis projects and internships</h2>
+    <p>We offer bachelor's and master's thesis projects and internships in edge AI, smart sensors, low-power IoT, embedded systems, robotics and the space domain. To discuss open topics, write to:</p>
+    <ul class="plain-list">
+      {{- range site.Params.contacts }}<li class="mono">{{ . }}</li>{{ end }}
+    </ul>
+  </section>
 </div>
 {{ end }}
