@@ -21,8 +21,10 @@ course:
   materials: ""
 
 modules:
+  # color = pastel of the matching research area (mint, lilac, peach, butter)
   - title: "Smart Sensing"
-    icon: chip
+    color: peach
+    icon: bolt
     text: "From electronics basics to real sensors in space."
     topics:
       - "Arduino: getting started, electricity basics, Ohm's law, series and parallel circuits"
@@ -30,13 +32,15 @@ modules:
       - "The Raspberry Pi AI Camera and computer vision"
       - "Analysis of real time-series and image data collected on the ISS"
   - title: "Edge AI Computing"
-    icon: bolt
+    color: mint
+    icon: chip
     text: "Turning raw data into decisions, directly on the device."
     topics:
       - "Exploratory data analysis: cleaning, missing values, visualization"
       - "Introduction to deep learning"
       - "Training deep neural networks with PyTorch"
   - title: "Communication & Telemetry"
+    color: lilac
     icon: wifi
     text: "Getting data off the satellite and down to the ground."
     topics:
@@ -64,7 +68,7 @@ project:
 # ── Where we teach ───────────────────────────────────────────
 learnlab:
   name: "SPOK"
-  subtitle: "IT:U Space LearnLab"
+  subtitle: "IT:U LearnLab for the space domain"
   quote: >
     Tired of big lecture halls, endless theory, and waiting until the final semester to actually build something with technology?
     At IT:U, learning works differently. Your future classrooms are cutting-edge LearnLabs, where from day one,
@@ -75,6 +79,7 @@ learnlab:
   location_text: >
     SPOK is located inside Infineon's site in Linz, as part of the new cluster that IT:U has opened there.
     Students learn and build right next to a world leader in semiconductors and power systems.
+  # Put the official logo file here (SVG or PNG). The page shows it automatically when the file exists.
   partner_logo: "images/partners/infineon-logo.svg"
   partner_name: "Infineon Technologies"
 ---

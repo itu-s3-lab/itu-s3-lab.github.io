@@ -13,6 +13,14 @@
   --line-strong: #C9C9C2;
   --accent: #1F4FE0;
   --accent-hover: #163BAA;
+
+  /* Pastel palette: used only for the card grids (research areas, course modules) */
+  --mint: #D4F0DF;
+  --lilac: #E6E0FA;
+  --peach: #FFE1D1;
+  --butter: #FFF1B8;
+  --on-pastel: #33384A;
+  --lilac-deep: #B9AAF0;   /* link underline */
   --dark: #16181D;
   --dark-line: #2E323B;
   --dark-text: #C9CED8;
@@ -343,6 +351,40 @@ p { margin: 0; }
 .footer-col .label { color: var(--dark-subtle); font-size: 13px; letter-spacing: 0.08em; margin-bottom: 4px; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--dark-line); font-size: 13px; color: var(--dark-subtle); }
 .footer-bottom a { text-decoration: underline; color: var(--dark-subtle); }
+
+/* ── Pastel cards ─────────────────────────────────────────────
+   One soft color per card, cycling: research areas on the home page
+   and course modules on the Teaching page. Text stays ink.
+   ───────────────────────────────────────────────────────────── */
+.card-grid > .card { border: none; border-radius: 18px; }
+.card-grid > .card p { color: var(--on-pastel); }
+.card-grid > .card:nth-child(4n+1) { background: var(--mint); }
+.card-grid > .card:nth-child(4n+2) { background: var(--lilac); }
+.card-grid > .card:nth-child(4n+3) { background: var(--peach); }
+.card-grid > .card:nth-child(4n+4) { background: var(--butter); }
+.card-grid > .card .card-icon { background: rgba(255, 255, 255, 0.75); border-color: transparent; }
+.card-grid > .card .topic-list { border-top-color: rgba(22, 24, 29, 0.12); color: var(--on-pastel); }
+.card-grid > .card .card-icon { color: var(--ink); }
+
+/* Explicit colors (set with "color:" in data/research.yaml and content/teaching.md)
+   override the automatic cycle above. */
+.card-grid > .card.pastel-mint, .card-icon.pastel-mint { background: var(--mint); }
+.card-grid > .card.pastel-lilac, .card-icon.pastel-lilac { background: var(--lilac); }
+.card-grid > .card.pastel-peach, .card-icon.pastel-peach { background: var(--peach); }
+.card-grid > .card.pastel-butter, .card-icon.pastel-butter { background: var(--butter); }
+
+/* Research page: icons follow the same pastel cycle */
+.research-item .card-icon { border: none; color: var(--ink); }
+.research-item:nth-child(4n+1) .card-icon { background: var(--mint); }
+.research-item:nth-child(4n+2) .card-icon { background: var(--lilac); }
+.research-item:nth-child(4n+3) .card-icon { background: var(--peach); }
+.research-item:nth-child(4n+4) .card-icon { background: var(--butter); }
+
+/* Text links: ink with a soft lilac underline */
+a { color: var(--ink); text-decoration-color: var(--lilac-deep); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: #000; text-decoration-color: var(--ink); }
+.more { color: var(--ink); text-decoration: underline; text-decoration-color: var(--lilac-deep); text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.more:hover { color: #000; text-decoration-color: var(--ink); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

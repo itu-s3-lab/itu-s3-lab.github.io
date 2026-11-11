@@ -28,7 +28,7 @@
     </div>
     <div class="card-grid">
       {{- range hugo.Data.research }}
-      <div class="card">
+      <div class="card{{ with .color }} pastel-{{ . }}{{ end }}">
         <div class="card-icon">{{ partial "icon.html" (dict "name" .icon) }}</div>
         <h3>{{ .title }}</h3>
         <p>{{ .summary }}</p>

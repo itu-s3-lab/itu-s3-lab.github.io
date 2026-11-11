@@ -28,7 +28,7 @@
     <h2>Sensing, computation, transmission</h2>
     <div class="card-grid module-grid">
       {{- range $i, $m := . }}
-      <div class="card">
+      <div class="card{{ with $m.color }} pastel-{{ . }}{{ end }}">
         <div class="card-icon">{{ partial "icon.html" (dict "name" $m.icon) }}</div>
         <p class="label module-num">Module {{ add $i 1 }}</p>
         <h3>{{ $m.title }}</h3>

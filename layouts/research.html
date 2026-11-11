@@ -4,7 +4,7 @@
   <div class="research-list">
     {{- range $i, $a := hugo.Data.research }}
     <section class="research-item">
-      <div class="card-icon">{{ partial "icon.html" (dict "name" $a.icon) }}</div>
+      <div class="card-icon{{ with $a.color }} pastel-{{ . }}{{ end }}">{{ partial "icon.html" (dict "name" $a.icon) }}</div>
       <div>
         <p class="label">{{ printf "%02d" (add $i 1) }}</p>
         <h2>{{ $a.title }}</h2>

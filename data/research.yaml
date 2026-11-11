@@ -1,7 +1,10 @@
 # Research areas. Shown as cards on the home page and in full on /research/.
-# icon: one of chip, wifi, bolt, robot, satellite (see layouts/_partials/icon.html)
+# icon:  one of chip, wifi, bolt, robot, satellite (see layouts/_partials/icon.html)
+# color: pastel of the card — mint, lilac, peach or butter.
+#        The same color marks the matching course module on the Teaching page.
 
 - title: "Edge AI & Intelligent Sensors"
+  color: mint
   icon: chip
   summary: "AI models optimized for low-power devices, and sensors that perceive and interpret their environment autonomously."
   text: >
@@ -9,6 +12,7 @@
     and design sensors capable of autonomously perceiving and interpreting the environment.
 
 - title: "Wireless Sensor Networks & Low-Power IoT"
+  color: lilac
   icon: wifi
   summary: "Efficient architectures and protocols that keep large distributed systems connected and sustainable."
   text: >
@@ -16,6 +20,7 @@
     and sustainability of large-scale distributed systems.
 
 - title: "Embedded Systems & Energy Harvesting"
+  color: peach
   icon: bolt
   summary: "Embedded hardware and harvesting techniques for smart devices that power themselves."
   text: >
@@ -23,6 +28,7 @@
     and the development of energy harvesting techniques to create fully self-powered smart devices.
 
 - title: "Autonomous Robots"
+  color: butter
   icon: robot
   summary: "Robots designed for complex scenarios and real industrial applications."
   text: >
