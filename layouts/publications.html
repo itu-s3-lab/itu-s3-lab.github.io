@@ -15,6 +15,11 @@
       </div>
     </section>
     {{- end }}
+    <div class="actions">
+      {{- range $m := hugo.Data.team }}{{ with $m.links }}{{ with .scholar }}
+      <a class="btn btn-secondary" href="https://scholar.google.com/citations?user={{ . }}" rel="noopener">{{ partial "icon.html" (dict "name" "scholar" "size" 18) }} {{ $m.name }} on Google Scholar</a>
+      {{- end }}{{ end }}{{ end }}
+    </div>
   {{- else }}
     <div class="side-card">
       <p class="label">Coming soon</p>

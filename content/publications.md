@@ -1,6 +1,6 @@
 ---
 title: "Publications"
 eyebrow: "Publications"
-description: "Papers, articles and preprints from the S³ Lab."
+description: "Accepted papers from the S³ Lab, newest first."
 layout: publications
 ---

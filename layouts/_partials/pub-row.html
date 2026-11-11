@@ -3,11 +3,15 @@
   <div class="pub-body">
     <p class="pub-title">{{ .title }}</p>
     <p class="pub-meta">{{ .authors }}{{ with .venue }} · <em>{{ . }}</em>{{ end }}</p>
+    {{ with .note }}<p class="pub-note mono">{{ . }}</p>{{ end }}
   </div>
   {{- with .links }}
   <div class="pub-links">
-    {{- with .pdf }}<a href="{{ . }}" rel="noopener">PDF</a>{{ end }}
+    {{- with .ieee }}<a href="{{ . }}" rel="noopener">IEEE</a>{{ end }}
+    {{- with .acm }}<a href="{{ . }}" rel="noopener">ACM</a>{{ end }}
     {{- with .doi }}<a href="{{ . }}" rel="noopener">DOI</a>{{ end }}
+    {{- with .arxiv }}<a href="{{ . }}" rel="noopener">arXiv</a>{{ end }}
+    {{- with .pdf }}<a href="{{ . }}" rel="noopener">PDF</a>{{ end }}
     {{- with .code }}<a href="{{ . }}" rel="noopener">Code</a>{{ end }}
   </div>
   {{- end }}

@@ -1,16 +1,73 @@
-# Publications, shown on /publications/ grouped by year (newest first).
+# Accepted papers, shown on /publications/ grouped by year (newest first).
+# Within a year, papers appear in the order of this file.
 # Entries with  selected: true  also appear on the home page (max 3).
-# Remove the "[]" below and add entries like the example.
+# Template:
 #
 # - title: "Paper title"
 #   authors: "A. Author, B. Author, M. Magno"
 #   venue: "IEEE Sensors Conference"
 #   year: 2026
 #   type: conference        # conference | journal | workshop | preprint | book-chapter
-#   selected: true
-#   links:                  # all optional
-#     pdf: "https://arxiv.org/abs/..."
+#   note: ""                # optional short note, e.g. "Proceedings not yet available"
+#   selected: false
+#   links:                  # all optional, shown as buttons in this order
+#     ieee: "https://ieeexplore.ieee.org/document/..."
+#     acm: "https://dl.acm.org/doi/..."
 #     doi: "https://doi.org/..."
+#     arxiv: "https://arxiv.org/abs/..."
+#     pdf: "https://..."
 #     code: "https://github.com/itu-s3-lab/..."
 
-[]
+- title: "Exploiting In-Sensor Computing for Energy-Efficient Earth Observation"
+  authors: "L. Capogrosso, P. Bonazzi, L. Hoxhaj, M. Magno"
+  venue: "XXIV Annual Conference on Sensors and Microsystems (AISEM)"
+  year: 2026
+  type: conference
+  note: "Proceedings not yet available"
+  links:
+    arxiv: "https://arxiv.org/abs/2606.01271"
+
+- title: "Event-Based Vision in Space: Applications, Trends, and Future Directions"
+  authors: "L. Capogrosso, P. Bonazzi, M. Magno"
+  venue: "XXIV Annual Conference on Sensors and Microsystems (AISEM)"
+  year: 2026
+  type: conference
+  note: "Proceedings not yet available"
+  links:
+    arxiv: "https://arxiv.org/abs/2606.01280"
+
+- title: "TinySimpleNet: A SimpleNet for Unsupervised Industrial Anomaly Detection on Edge Devices"
+  authors: "L. Capogrosso, E. Fraccaroli, M. Magno, F. Fummi"
+  venue: "34th International Conference on Very Large Scale Integration (VLSI-SoC)"
+  year: 2026
+  type: conference
+  links:
+    ieee: "https://ieeexplore.ieee.org/document/11740580"
+
+- title: "TinyPDNet: Real-Time Activity Recognition in Parkinson's Disease with Ultra-Low-Power MCUs"
+  authors: "L. Capogrosso, F. Firouzi, M. Magno, F. Demrozi"
+  venue: "IEEE Sensors Applications Symposium (SAS)"
+  year: 2026
+  type: conference
+  links:
+    ieee: "https://ieeexplore.ieee.org/document/11744189"
+
+- title: "Performance Analysis of Edge and In-Sensor AI Processors: A Comparative Review"
+  authors: "L. Capogrosso, P. Bonazzi, M. Magno"
+  venue: "IEEE International Instrumentation and Measurement Technology Conference (I2MTC)"
+  year: 2026
+  type: conference
+  selected: true
+  links:
+    ieee: "https://ieeexplore.ieee.org/document/11694692"
+    arxiv: "https://arxiv.org/abs/2603.08725"
+
+- title: "TinyML Enhances CubeSat Mission Capabilities"
+  authors: "L. Capogrosso, M. Magno"
+  venue: "ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS)"
+  year: 2026
+  type: conference
+  selected: true
+  links:
+    ieee: "https://ieeexplore.ieee.org/document/11570704"
+    arxiv: "https://arxiv.org/abs/2603.20174"
