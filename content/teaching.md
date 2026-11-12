@@ -28,8 +28,7 @@ modules:
     text: "From electronics basics to real sensors in space."
     topics:
       - "Arduino: getting started, electricity basics, Ohm's law, series and parallel circuits"
-      - "Raspberry Pi and the Sense HAT: environmental sensing and data logging"
-      - "The Raspberry Pi AI Camera and computer vision"
+      - "Raspberry Pi, Sense HAT, and AI Camera: environmental sensing and data logging"
       - "Analysis of real time-series and image data collected on the ISS"
   - title: "Edge AI Computing"
     color: mint
@@ -50,9 +49,12 @@ modules:
 project:
   title: "The LearnLab project: a CubeSat for Earth observation"
   text: >
-    In the practical part, small interdisciplinary teams design and build their own CubeSat prototype:
-    a 3D-printed frame around a Raspberry Pi 5, with the Sense HAT and the AI Camera acquiring top-view images
-    and sensor data, streamed live to a ground-station dashboard. Teams work through a Design Thinking process.
+    In the practical part, small interdisciplinary teams design and build their own CubeSat prototype.
+    The Raspberry Pi 5 with the Sense HAT and AI Camera, as well as a custom-PCB-designed board with
+    advanced communication protocols such as the Semtech SX1278 low-power sub-GHz radio transceiver,
+    are examples of what students can build. The LearnLab is equipped for many other possibilities too;
+    the only limit is their imagination. Students can focus on hardware, software, or the combination of both,
+    while working through a Design Thinking process.
   phases:
     - name: "Empathize"
       text: "Understand users, their needs and the mission context."
@@ -85,4 +87,4 @@ learnlab:
 ---
 
 Our educational philosophy is founded on **project-based learning**: students acquire advanced technical skills and problem-solving capabilities by developing real-world projects, bridging the gap between academic theory and industrial application.
-Students who want to go further can continue with a thesis or an internship in our lab.
+Students who want to go further can continue with an internship, a thesis, or a Ph.D. in our lab.

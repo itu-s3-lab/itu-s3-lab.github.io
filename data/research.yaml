@@ -8,7 +8,7 @@
   icon: chip
   summary: "AI models optimized for low-power devices, and sensors that perceive and interpret their environment autonomously."
   text: >
-    We develop artificial intelligence algorithms optimized for execution on low-power devices,
+    We develop machine learning models optimized for execution on low-power devices,
     and design sensors capable of autonomously perceiving and interpreting the environment.
 
 - title: "Wireless Sensor Networks & Low-Power IoT"
